@@ -59,7 +59,7 @@ export default function NavBar() {
           <Nav className="mr-auto" navbar>
           </Nav>
           <form className="form-inline my-2 my-lg-0">
-    <input className="form-control mr-sm-2" type="search by title" placeholder="Search" onChange={(e)=>handleChange(e.target.value)} aria-label="Search"/>
+    <input className="form-control mr-sm-2" type="search" placeholder="Search  by title" onChange={(e)=>handleChange(e.target.value)} aria-label="Search"/>
   </form>
           
         </Collapse>

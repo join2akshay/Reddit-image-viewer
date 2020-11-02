@@ -1,6 +1,6 @@
 /* eslint react/no-multi-comp: 0, react/prop-types: 0 */
 
-import React, { useState, useEffect, useContext } from 'react';
+import React, {  useContext } from 'react';
 import { Button, Modal, ModalHeader, ModalBody, ModalFooter, Row, Col } from 'reactstrap';
 import { DataContext } from '../../ContextAPI/ContextAPI';
 
@@ -12,7 +12,7 @@ const ModalView = (props) => {
   } = props;
   console.log(url)
 
-  const [state,dispatch]=useContext(DataContext)
+  const [state]=useContext(DataContext)
 
 
 
@@ -26,7 +26,7 @@ const ModalView = (props) => {
       <Modal isOpen={modal} toggle={toggle} >
         <ModalHeader toggle={toggle}> {state.modalViewData[0].data.author}'s Image</ModalHeader>
         <ModalBody>
-            <img src={url} alt={`${state.modalViewData[0].data.author}'s Image`}/>
+            <img src={url} alt={`${state.modalViewData[0].data.author}`}/>
             <Row className='my-2'>  
             <Col>
                     <h4>

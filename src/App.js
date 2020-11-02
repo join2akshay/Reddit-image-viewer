@@ -1,5 +1,5 @@
 
-import './App.css';
+// import './App.css';
 import Home from './Page/Home';
 import { DataContextProvider } from './ContextAPI/ContextAPI';
 

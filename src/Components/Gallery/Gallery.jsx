@@ -1,4 +1,4 @@
-import React, { useState, useContext, useEffect } from 'react'
+import React, { useState, useContext} from 'react'
 import './gallery.css'
 import ModalView from '../Modal/Modal'
 import { DataContext } from '../../ContextAPI/ContextAPI'
@@ -23,6 +23,7 @@ export default function Gallery() {
         
 
     }
+    // state.filterData.map((item)=>console.log(item.data.preview.images[0]))
 
     const unEscapeUrl=(url,id)=>{
         const div = document.createElement('div');
@@ -34,7 +35,12 @@ export default function Gallery() {
  
         <div className="gallery">
         {
-            state.filterData.map((item,ind)=> unEscapeUrl(item.data.preview.images[0].source.url,item.data.id))
+            state.filterData.map((item)=>
+            {
+             if(item.data.preview!==undefined){return unEscapeUrl(item.data.preview.images[0].source.url,item.data.id)}
+             
+}
+             )
         }
         {
             modal &&  <ModalView modal={modal} url={selectedURL} setModal={setModal}/>
@@ -46,3 +52,6 @@ export default function Gallery() {
         
     )
 }
+
+
+// unEscapeUrl(item.data.preview.images[0].source.url,item.data.id)

@@ -5,14 +5,7 @@ import {
   Navbar,
   NavbarToggler,
   NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText
+  Nav
 } from 'reactstrap';
 import { filterDataByName } from '../../utils/filterData';
 
